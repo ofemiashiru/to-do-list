@@ -1,0 +1,155 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family:sans-serif;
+}
+
+.top {
+  display: grid;
+  justify-content: flex-end;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #6D9886;
+  border-bottom: 10px solid rgba(31, 38, 135, 0.37);
+  color: white;
+}
+
+.top h1 {
+  text-align: right;
+  font-weight: 900;
+}
+
+.top-nav{
+margin:0 0 0 auto;
+}
+
+.top-nav li {
+  display: inline;
+}
+
+.top-nav li a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.top-nav li a:hover{
+  color: rgba(31, 38, 135, 0.4);
+}
+
+.type-heading {
+  background-color: #6D9886;
+  color: #FFF;
+  font-weight: 900;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  width: 450px;
+
+}
+
+h5 {
+  text-align: center;
+  color: #A9A9A9;
+}
+
+.main {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(1, auto);
+  margin-bottom: 50px;
+  position:relative;
+}
+
+.the-list {
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 7px 12px 0 rgb(79,110,135);
+  /* height: 325px;
+  overflow: auto; */
+}
+
+.list-group-item {
+  padding: 20px;
+}
+
+p {
+  display: inline;
+  padding: 10px;
+  font-size: 1.3rem;
+}
+
+.form-floating {
+  display: flex;
+  justify-content: center;
+}
+
+.form-control {
+  /* margin:5px; */
+}
+
+.btn {
+  background-color: #6D9886;
+  /* border-color: #6D9886; */
+  border:none;
+  width: 70px;
+  margin: 0 5px;
+}
+
+.btn:hover {
+  background-color: rgba(109,152,134, .7);
+  border-color: rgba(109,152,134, .2);
+}
+
+
+.fas {
+  padding: 0;
+  font-size: 1.7rem;
+}
+
+.checkbox {
+  width: 30px;
+  height: 30px;
+  float: left;
+  padding: 5px;
+  cursor: pointer;
+}
+
+
+.checkbox:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #FF0000;
+}
+
+label {
+  color: #A9A9A9;
+}
+
+.lists-link{
+  text-decoration: none;
+  color: ;
+}
+
+span{
+  color: #909090;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-left: 5px;
+}
+
+.footer-padding {
+	padding: 60px;
+}
+
+.footer {
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+}
+
+.footer p {
+	margin-top: 25px;
+	font-size: 1rem;
+  color: rgb(79,110,135);
+}

@@ -1,0 +1,45 @@
+<%- include("partials/header"); -%>
+<div class="top">
+  <h1>ToDo List </h1>
+  <%- include('partials/links'); -%>
+</div>
+<div class="main">
+  <% //Using function inside ejs file - don't forget return Ajasko %>
+  <%function capitaliseFirstLetter(string) { %>
+  <%  let str = string.charAt(0).toUpperCase() + string.slice(1); %>
+  <%  return str; %>
+  <%} %>
+
+  <% let theTitle = capitaliseFirstLetter(listTitle); %>
+
+  <h2 class="type-heading">
+
+    <%= theTitle %>
+
+  </h2>
+  <h5><%= theDate %></h5>
+
+  <form class="" action="/delete" method="post">
+    <div class="the-list">
+
+      <% allItems.forEach((item, i) => { %>
+      <div class="list-group-item">
+
+        <input onChange="this.form.submit()" class="checkbox" value="<%= item.id %>" type="checkbox" name="checkbox">
+
+        <p> <%= item.list_item %> </p>
+
+      </div>
+      <% }); %>
+    </div>
+  </form>
+
+  <form class="" action="/" method="post">
+    <div class="form-floating">
+      <input type="text" class="form-control" name="newItem" id="floatingInput" placeholder=" " autocomplete="off" autofocus required>
+      <label class="new-item-label" for="floatingInput">New <%= theTitle %> Item</label>
+      <button class="btn btn-primary" type="submit" name="list_type" value=<%= typeID %>><i class="fas fa-plus"></i></button>
+    </div>
+  </form>
+
+  <%- include("partials/footer"); -%>

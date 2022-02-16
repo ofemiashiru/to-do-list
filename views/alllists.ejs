@@ -1,0 +1,38 @@
+<%- include("partials/header"); -%>
+<div class="top">
+  <h1>ToDo List</h1>
+  <%- include('partials/links'); -%>
+</div>
+<div class="main">
+
+  <h2 class="type-heading">
+    All Lists
+  </h2>
+  <h5>Add/Delete List</h5>
+
+  <form class="" action="/deletetype" method="post">
+    <div class="the-list">
+      <%  let message = "" %>
+      <% allLists.forEach((item, i) => { %>
+      <div class="list-group-item">
+        <input onChange="this.form.submit()" class="checkbox" value="<%= item.id %>" type="checkbox" name="checkbox">
+        <p>
+          <a class="lists-link" href="list/<%=item.type%>"><%= item.type %></a>
+        <% if(item.type === "home") {%>
+            <span>(default cannot be deleted)</span>
+        <%}%>
+        </p>
+      </div>
+      <% }); %>
+    </div>
+  </form>
+
+  <form class="" action="/alllists" method="post">
+    <div class="form-floating">
+      <input type="text" class="form-control" name="newType" id="floatingInput" placeholder=" " autocomplete="off" autofocus required>
+      <label class="new-item-label" for="floatingInput">New List</label>
+      <button class="btn btn-primary" type="submit" name="type" value=""><i class="fas fa-plus"></i></button>
+    </div>
+  </form>
+
+<%- include("partials/footer"); -%>
